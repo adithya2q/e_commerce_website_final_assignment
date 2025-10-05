@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -10,6 +10,12 @@ import { useSelector } from 'react-redux';
 const Layout = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const cartItems = useSelector((state) => state.cart.value);
+  const navigate=useNavigate();
+  const token = localStorage.getItem("@token"); 
+const handleSignOut=()=>{
+    localStorage.removeItem('@token');
+    navigate("/login")
+}
 
   // Handle search input change
   const handleSearchChange = (e) => {
@@ -49,6 +55,15 @@ const Layout = () => {
                 Search
               </Button>
             </Form>
+        <Navbar.Collapse className="justify-content-end">
+                {token && (
+          <Navbar.Text className='me-3'>
+        <Button onClick={handleSignOut} variant="outline-danger" className='ms-3'>
+          Sign Out
+        </Button>
+      </Navbar.Text>  
+      )}
+        </Navbar.Collapse>
         </Navbar.Collapse>
       </Container>
     </Navbar>
