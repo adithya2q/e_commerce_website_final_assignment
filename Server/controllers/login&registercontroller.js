@@ -21,7 +21,7 @@ module.exports={
                         const isPasswordMatch=await bcrypt.compare(password,adminFound.password);
                         if (isPasswordMatch){
                             delete adminFound.password;
-                            const token=jwt.sign({_id:adminFound._id},process.env.JWT_SECRET_KEY,{expiresIn:'5d'});
+                            const token=jwt.sign({_id:adminFound._id,role:'admin'},process.env.JWT_SECRET_KEY,{expiresIn:'5d'});
                             return res.status(200).json({
                                 success:true,
                                 status:200,
@@ -38,7 +38,7 @@ module.exports={
                     const isPasswordMatch=await bcrypt.compare(password,customerFound.password);
                     if (isPasswordMatch){
                         delete customerFound.password;
-                        const token=jwt.sign({_id:customerFound._id},process.env.JWT_SECRET_KEY,{expiresIn:'5d'});
+                        const token=jwt.sign({_id:customerFound._id,role:'customer'},process.env.JWT_SECRET_KEY,{expiresIn:'5d'});
                         return res.status(201).json({
                             success:true,
                             status:201,

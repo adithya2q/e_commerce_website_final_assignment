@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 
 const cartSlice=createSlice({
@@ -21,7 +22,7 @@ const cartSlice=createSlice({
             );
       
             if (existingProduct) {
-              window.alert(`${title} quantity has already been added.`);
+              toast(`${title} quantity has already been added.`);
             } else {
               state.value.push({
                 id,
@@ -30,7 +31,7 @@ const cartSlice=createSlice({
                 Category,
                 Image,
               });
-              window.alert(`${title} has been added to the cart.`);
+              toast(`${title} has been added to the cart.`);
             }
           },
           removeProduct: (state, action) => {

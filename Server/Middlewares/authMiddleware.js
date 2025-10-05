@@ -19,6 +19,7 @@ module.exports={
 
             if (decryptedToken && decryptedToken._id){
                 req.userId=decryptedToken.id;
+                req.role=decryptedToken.role;
                 next();
             }
         }
