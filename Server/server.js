@@ -17,7 +17,9 @@ app.use('',router);
 
 
 const PORT=process.env.PORT;
-
+app.get('/', (req, res) => {
+  res.status(200).send('CricTracker Backend API is running!');
+});
 app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}`);
 });

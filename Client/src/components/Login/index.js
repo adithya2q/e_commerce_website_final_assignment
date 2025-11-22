@@ -65,9 +65,9 @@ const LoginPage = () => {
   return (
     <div>
     <Container>
-      <Row className='g-0' style={{backgroundImage:"url('https://img.freepik.com/free-photo/shopping-bag-cart_23-2148879372.jpg')",backgroundRepeat:'no-repeat',backgroundPosition:'center',minHeight:'100vh',backgroundSize:'cover'}}>
-        <Col xs={12}  md={6}  className='d-flex align-items-center justify-content-center' style={{backgroundColor:'sandybrown'}}>
-      <div style={{backgroundColor:'skyblue', padding:'20px', borderRadius:'10px', width:'100%', maxWidth:'400px', boxShadow:'0 0 10px rgba(0,0,0,0.1)'}}>
+      <Row className='g-0' style={{backgroundImage:"url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3JpY2tldCUyMHNwb3J0fGVufDB8fDB8fHww&fm=jpg&q=60&w=3000')",backgroundRepeat:'no-repeat',backgroundPosition:'center',minHeight:'100vh',backgroundSize:'cover'}}>
+        <Col xs={12}  md={6}  className='d-flex align-items-center justify-content-center' >
+      <div style={{backgroundColor:'crimson', padding:'20px', borderRadius:'10px', width:'100%', maxWidth:'400px', boxShadow:'0 0 10px rgba(0,0,0,0.1)'}}>
     <Form style={{marginTop:'4rem'}}>
         <h1 className='text-center mb-4'>Login</h1>
       <Form.Group className="mb-3" controlId="formGroupEmail">
