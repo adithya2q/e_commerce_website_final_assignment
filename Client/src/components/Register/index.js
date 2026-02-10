@@ -27,6 +27,7 @@ const Register= () => {
 }
 
 const handleSubmit=async(event)=>{
+    alert("SUBMIT FIRED");
     event.preventDefault();
     setName(name.trim());
     setEmail(email.trim());
