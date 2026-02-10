@@ -53,7 +53,7 @@ const handleSubmit=async(event)=>{
       <Col md={6} className="mx-auto">
     <div  style={{backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTimkSPl3KJabcGSGIsN3eFkK2jGMHk_1_yQ2fG9z_thTB1K7sklKBrYpr76fq3OKs44w&usqp=CAUl)', padding:'20px', borderRadius:'10px', backgroundRepeat:'no-repeat', backgroundSize:'cover', marginTop:'20px'}}>
         <h1 className='text-white'>Register Page</h1>  
-        <Form>
+        <Form onsubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label className='text-white'>Name</Form.Label>
         <Form.Control type="text" placeholder="Enter name" onChange={(e) => setName(e.target.value)} />
@@ -83,7 +83,7 @@ const handleSubmit=async(event)=>{
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" className='text-white' label="I confirm the above details" />
       </Form.Group>
-      <Button variant="primary" type="submit" onClick={handleSubmit}>
+      <Button variant="primary" type="submit" >
         Submit
       </Button>
     </Form>
